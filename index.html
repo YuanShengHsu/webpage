@@ -234,10 +234,32 @@
             line-height: 1.7;
         }
 
+        /* Publications */
+        .publication-item {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e8e8e8;
+        }
+
+        .publication-item p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .publication-item .authors {
+            color: #333;
+        }
+
+        .publication-item .journal {
+            font-style: italic;
+            color: #666;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
@@ -258,25 +280,6 @@
             font-size: 0.9rem;
             color: #555;
             margin-bottom: 0.35rem;
-        }
-
-        /* News Section */
-        .news-list {
-            font-size: 0.95rem;
-        }
-
-        .news-item {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-
-        .news-date {
-            color: #888;
-            margin-right: 0.5rem;
-        }
-
-        .news-content strong {
-            font-weight: 600;
         }
 
         /* Footer */
@@ -352,8 +355,8 @@
                 <ul>
                     <li><a href="#about">Home</a></li>
                     <li><a href="#resume">Resume</a></li>
+                    <li><a href="#publications">Publications</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#news">News</a></li>
                 </ul>
             </nav>
         </div>
@@ -365,14 +368,13 @@
 
         <section class="hero" id="about">
             <div class="hero-image">
-                <!-- Make sure to upload profile.jpg to your GitHub repository -->
                 <img src="profile.jpg" alt="Yuan-Sheng Hsu">
             </div>
             <div class="hero-content">
                 <h1>Yuan-Sheng Hsu, M.D., Ph.D.</h1>
                 <h3>I am a <strong>Physician-Scientist</strong> with a dual M.D./Ph.D., combining deep biomedical domain expertise with hands-on data analytics experience.</h3>
                 <p class="hero-links">
-                    <a href="#">CV</a> | 
+                    <a href="My_CV.pdf" target="_blank">CV</a> | 
                     <a href="https://scholar.google.com/" target="_blank">Google Scholar</a> | 
                     <a href="https://orcid.org/" target="_blank">ORCID</a> | 
                     <a href="https://linkedin.com/" target="_blank">LinkedIn</a> | 
@@ -399,7 +401,7 @@
                         <h4>M.D. / Ph.D. in Medicine</h4>
                         <p class="institution">China Medical University, Taichung, Taiwan</p>
                         <p>Ph.D. Advisor: Academician Wen-Hwa Lee, Genomics Research Center, Academia Sinica<br>
-                        Dissertation: High-sugar diet-induced pancreatic DNA damage and oncogenic mechanisms via O-GlcNAcylation and dNTP pool imbalance</p>
+                        Dissertation: Differential effects of glucose and N-acetylglucosamine on genome instability</p>
                     </div>
                 </div>
             </div>
@@ -422,11 +424,11 @@
                     </div>
                 </div>
                 <div class="resume-item">
-                    <span class="resume-date">Sep 2022 – Dec 2023</span>
+                    <span class="resume-date">Sep 2022 – Aug 2024</span>
                     <div class="resume-details">
                         <h4>Clinical Data Analyst</h4>
                         <p class="institution">China Medical University Hospital, Taichung, Taiwan</p>
-                        <p>Built and queried hospital data warehouse (400K+ patient samples) using SQL and ICD diagnostic codes. Designed 1:5 matched case-control study for breast cancer genomic research. Executed GWAS on Linux using PLINK and generated publication-ready visualizations with R and LocusZoom.</p>
+                        <p>Built and queried hospital data warehouse (400K+ patient samples) using SQL and ICD diagnostic codes to extract cancer vs. non-cancer cohorts for genetic profiling. Designed 1:5 matched case-control study for breast cancer genomic research. Executed GWAS on Linux using PLINK and generated publication-ready visualizations with R and LocusZoom.</p>
                     </div>
                 </div>
                 <div class="resume-item">
@@ -434,29 +436,39 @@
                     <div class="resume-details">
                         <h4>Ph.D. Researcher</h4>
                         <p class="institution">Genomics Research Center, Academia Sinica, Taipei, Taiwan</p>
-                        <p>Investigated molecular mechanisms by which high-sugar diets induce pancreatic DNA damage and promote carcinogenesis. Performed LC-MS metabolomics for dNTP pool quantification. Developed high-content imaging assays (96-well format) for DNA damage and protein glycosylation screening. Conducted multiplex IHC + RNA SCOPE on precancerous pancreatic lesions.</p>
+                        <p>Investigated molecular mechanisms by which high-sugar diets induce pancreatic DNA damage and promote carcinogenesis through O-GlcNAcylation and nucleotide metabolism disruption. Designed and executed animal model studies. Performed LC-MS metabolomics for dNTP pool quantification. Developed high-content imaging assays (96-well format) for DNA damage and protein glycosylation screening. Conducted multiplex IHC + RNA SCOPE on precancerous pancreatic lesions.</p>
                     </div>
                 </div>
             </div>
 
             <div class="resume-section">
-                <h3 class="resume-section-title">Selected Achievements</h3>
+                <h3 class="resume-section-title">Training</h3>
                 <div class="resume-item">
-                    <span class="resume-date">2022</span>
+                    <span class="resume-date">AI Course</span>
                     <div class="resume-details">
-                        <h4>Featured Research Publication</h4>
-                        <p class="institution">Genomics Research Center, Academia Sinica</p>
-                        <p>Research on high-sugar diet-induced pancreatic DNA damage featured by the research center.</p>
-                    </div>
-                </div>
-                <div class="resume-item">
-                    <span class="resume-date">Training</span>
-                    <div class="resume-details">
-                        <h4>Medical Image Recognition AI Course</h4>
+                        <h4>Medical Image Recognition</h4>
                         <p class="institution">CNN Models with Python + PyTorch</p>
                         <p>Built and validated convolutional neural network models using Python and PyTorch on Kaggle datasets.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="publications">
+            <h2 class="section-header">Publications</h2>
+            
+            <div class="publication-item">
+                <p><span class="authors"><strong>Hsu YS</strong>, Wu PJ, Jeng YM, Hu CM, Lee WH.</span> Differential effects of glucose and N-acetylglucosamine on genome instability. <span class="journal">Am J Cancer Res.</span> 2022;12(4):1556-1576.</p>
+            </div>
+            
+            <div class="publication-item">
+                <p><span class="authors">Liu YH, Hu CM, <strong>Hsu YS</strong>, Lee WH.</span> Interplays of glucose metabolism and KRAS mutation in pancreatic ductal adenocarcinoma. <span class="journal">Cell Death Dis.</span> 2022;13(9):817.</p>
+            </div>
+            
+            <div class="publication-item">
+                <p><span class="authors"><strong>Hsu YS</strong>, Yong SB.</span> Correspondence to "early infancy dysbiosis in food protein-induced enterocolitis syndrome: A prospective cohort study". <span class="journal">Allergy.</span> 2024;79(2):540-541.</p>
             </div>
         </section>
 
@@ -472,7 +484,6 @@
                         <li>R (visualization, stats)</li>
                         <li>Python (PyTorch)</li>
                         <li>PLINK / GWAS</li>
-                        <li>LocusZoom</li>
                         <li>Linux</li>
                     </ul>
                 </div>
@@ -482,9 +493,9 @@
                         <li>Western Blot, IP, IF</li>
                         <li>ELISA, LC-MS</li>
                         <li>High-Content Screening</li>
-                        <li>Multiplex IHC</li>
-                        <li>RNA SCOPE</li>
+                        <li>Multiplex IHC + RNA SCOPE</li>
                         <li>Confocal Microscopy</li>
+                        <li>Animal Model Design</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -493,42 +504,20 @@
                         <li>Case-Control Design</li>
                         <li>Cohort Data Extraction</li>
                         <li>GWAS Analysis</li>
-                        <li>Data Warehouse</li>
-                        <li>Animal Model Design</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Languages</h4>
-                    <ul>
-                        <li>Mandarin (Native)</li>
-                        <li>English (Fluent)</li>
-                        <li>Japanese (JLPT N1)</li>
-                        <li>German (Goethe B2)</li>
+                        <li>Data Warehouse Management</li>
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <hr>
-
-        <section id="news">
-            <h2 class="section-header">News</h2>
-            <div class="news-list">
-                <div class="news-item">
-                    <span class="news-date">03/2025 •</span>
-                    <span class="news-content">Started as Physician at <strong>Taichung Veterans General Hospital</strong></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024 •</span>
-                    <span class="news-content">Completed <strong>M.D./Ph.D.</strong> at China Medical University</span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2022 •</span>
-                    <span class="news-content">Research featured by <strong>Genomics Research Center, Academia Sinica</strong></span>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2022 •</span>
-                    <span class="news-content">Completed Ph.D. research on pancreatic cancer mechanisms</span>
+            
+            <div class="skills-grid" style="margin-top: 2rem;">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Mandarin Chinese (Native)</li>
+                        <li>English (Fluent)</li>
+                        <li>Japanese (JLPT N1)</li>
+                        <li>German (Goethe B1)</li>
+                    </ul>
                 </div>
             </div>
         </section>
